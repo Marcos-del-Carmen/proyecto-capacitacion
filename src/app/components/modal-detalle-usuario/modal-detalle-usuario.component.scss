@@ -1,0 +1,23 @@
+ion-chip {
+    width: 100%;
+}
+
+ion-avatar {
+    width: 50%;
+    height: 50%;
+    padding: 10px;
+}
+ion-avatar img {
+    width: 100%;
+}
+
+ion-chip ion-label {
+    display: inline;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+ion-card-header ion-label {
+    font-size: 1.5em;
+    margin-top: 10px;
+}

@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalle de Categorias</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="cerrarModal()">Cerrar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-chip>
+      <ion-avatar>
+        <img [src]="categoria.image"/>
+      </ion-avatar>
+      <ion-label>{{categoria.updatedAt}}</ion-label>
+    </ion-chip>
+    <ion-card-header>
+      <ion-label>{{categoria.id}}</ion-label>
+    </ion-card-header>
+  </ion-card>
+</ion-content>

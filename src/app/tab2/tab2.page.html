@@ -1,17 +1,35 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      PRODUCTOS
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-grid>
+    <ion-row >
+      @for (item of listaProductos; track $index) { 
+        <!-- *ngFor="let item of listaProductos" esta es un manera de usarlo pero la de la liena 13 es mejor -->
+        <ion-col size="12" size-lg="3" size-md="4" sime-sm="4" size-xs="6" >
+          <ion-card [routerLink]="['/tabs/productos/detalle-producto', item.id]" >
+            <img alt="Silhouette of mountains" [src]="item.images[0]"/>
+            <ion-card-header>
+              <ion-card-title>{{item.title}}</ion-card-title>
+              <ion-card-subtitle>
+                <ion-badge [color]="item.price <= 30 ? 'danger' : 'success' ">
+                  $USD {{item.price}}
+                </ion-badge>
+              </ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content>
+              Descripción <br>{{item.description}}
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      }
+    </ion-row>
+  </ion-grid> 
+
 </ion-content>

@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalle de Usuario</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="cerrarModal()">Cerrar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-chip>
+      <ion-avatar>
+        <img [src]="usuario.avatar"/>
+      </ion-avatar>
+      <ion-label>{{usuario.creationAt}}</ion-label>
+    </ion-chip>
+    <ion-card-header>
+      <ion-label>Correo: {{usuario.email}}</ion-label>
+      <ion-label>Usuario: {{usuario.name}}</ion-label>
+      <ion-label>Rol: {{usuario.role}}</ion-label>
+      <ion-label>Contraseña: {{usuario.password}}</ion-label>
+    </ion-card-header>
+  </ion-card>
+</ion-content>
